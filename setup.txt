@@ -1,0 +1,9 @@
+How to setup:
+First, create a keyfile titled as your key. EG: CUIXMKS3-7WNOTREALJ-FAKE8J82-NWFFJYQS-EOHBYOTX
+On the first line of the keyfile, put your key.
+On the next line, put your secret. EG: 28db5c906dd32f5alsofakedontusethis1e427342d5175be658836244ecab95da74d
+On the last line, put your nonce. Just choose a random number off the top of your head.
+
+To run:
+cd into the tradexkr directory.
+run "python tradexkr.py MYKEY-FILE"
