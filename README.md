@@ -3,5 +3,5 @@ Tradexkr
 
 A simple and unfinished trade bot for BTC-E.
 
-#Setup#
+##Setup##
 https://github.com/Jaxkr/Tradexkr/wiki/Setup
