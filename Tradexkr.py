@@ -19,7 +19,7 @@ def getBalance(currency):
 	except KeyError:
 		print "Invalid currency code!"
 
-pairs = ('ltc_btc', 'nmc_btc', 'nvc_btc', 'trc_btc', 'ppc_btc', 'ftc_btc', 'cnc_btc')
+pairs = ('ltc_btc', 'nmc_btc', 'nvc_btc', 'trc_btc', 'ppc_btc', 'ftc_btc')
 def getBids():
 	prices = []
 
