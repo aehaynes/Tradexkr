@@ -110,7 +110,8 @@ def verifyNotStupid(balance):
 			return amount
 		else:
 			print "You're stubborn"
-			sys.exit(1)
+			print "You may try again."
+			print verifyNotStupid(amount)
 	else:
 		return balance
 def firstRun():
@@ -118,7 +119,7 @@ def firstRun():
 	print "using btc as base"
 	btcBalance = unicode(getBalance('btc'))
 	print "Current BTC balance is %s" % (btcBalance)
-	btcBalance = verifyNotStupid()
+	btcBalance = verifyNotStupid(btcBalance)
 	print "Inserting %s BTC as spendable in DB" % (btcBalance)
 	c.execute('SELECT EXISTS(SELECT * FROM base_balance)')
 	result = c.fetchone()
