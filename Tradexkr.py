@@ -101,13 +101,21 @@ def diversifyCrypto():
 	print "balances updated"
 
 
-
+def verifyNotStupid(balance):
+	if balance > 4:
+		print "This program is very new, and shouldn't be trusted with too much BTC."
+		print "How much do you want to use (less than 4)?"
+		amount = Decimal(raw_input())
+		return amount
+	else:
+		return balance
 def firstRun():
 	print "first run!"
 	print "using btc as base"
 	btcBalance = unicode(getBalance('btc'))
 	print "Current BTC balance is %s" % (btcBalance)
-	print "Inserting all BTC as spendable in DB"
+	btcBalance = verifyNotStupid()
+	print "Inserting %s BTC as spendable in DB" % (btcBalance)
 	c.execute('SELECT EXISTS(SELECT * FROM base_balance)')
 	result = c.fetchone()
 	if not result[0]:
