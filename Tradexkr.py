@@ -106,7 +106,11 @@ def verifyNotStupid(balance):
 		print "This program is very new, and shouldn't be trusted with too much BTC."
 		print "How much do you want to use (less than 4)?"
 		amount = Decimal(raw_input())
-		return amount
+		if amount < 4:
+			return amount
+		else:
+			print "You're stubborn"
+			sys.exit(1)
 	else:
 		return balance
 def firstRun():
